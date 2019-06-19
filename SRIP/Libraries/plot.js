@@ -3,7 +3,7 @@ google.charts.load('current', {'packages':['corechart']});
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['X-Axis', 'Y-Axis'],
+          ["X-Axis", "Y-Axis"],
           [ 8,      12],
           [ 4,      5.5],
           [ 11,     14],
@@ -13,10 +13,10 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-          title: 'Mean',
-          hAxis: {title: 'X-Axis', minValue: -10, maxValue: 10},
-          vAxis: {title: 'Y-Axis', minValue: -10, maxValue: 10},
-          legend: 'none'
+          title: "Mean",
+          hAxis: {title: "X-Axis", minValue: -10, maxValue: 10},
+          vAxis: {title: "Y-Axis", minValue: -10, maxValue: 10},
+          legend: "none"
         };
 
         var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
