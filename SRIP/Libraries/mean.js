@@ -17,24 +17,36 @@ var plot = [{
 
 total=0;
 
-
-var eqx = 0;
 var eqy = 0;
 
 for( var i=0;i< plot.length;i++)
  {
   var temp=0;
   var temp2=0;
-  plot.total += parseInt(plot[i].x * plot[i].outcome,10);
-  temp2 += parseInt(plot[i].y * plot[i].outcome,10);
+  total += plot[i].x * plot[i].outcome;
+  temp2 += plot[i].y * plot[i].outcome;
  }
 
-eqx = plot.total;
-eqy = temp2;
+eqx = total/plot.length;
+eqy = temp2/plot.length;
 
-
+//Mean of the probability 
 document.write(eqx);
-document.write(br);
 document.write(eqy);
+
+//Covariance of the random probability
+
+var covariance =0;
+
+for(var j=0;j<plot.length;j++)
+{
+ var temp =0;
+ temp += [(eqx - plot[j].x) * (eqy - plot[j].y)]
+}
+ covariance = temp/(plot.length -1);
+
+document.write(covariance);
+
+
 
 
