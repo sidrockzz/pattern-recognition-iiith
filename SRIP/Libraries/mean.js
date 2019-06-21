@@ -41,7 +41,7 @@ var covariance =0;
 for(var j=0;j<plot.length;j++)
 {
  var temp =0;
- temp += [(eqx - plot[j].x) * (eqy - plot[j].y)]
+ temp += [(eqx - plot[j].x) * (eqy - plot[j].y)];
 }
  covariance = temp/(plot.length -1);
 
